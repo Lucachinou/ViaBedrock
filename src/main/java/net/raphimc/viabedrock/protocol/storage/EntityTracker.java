@@ -45,18 +45,6 @@ public class EntityTracker extends StoredObject {
     private final Map<Integer, Long> javaIdToUniqueId = new HashMap<>();
     private final Map<BlockPosition, Integer> itemFrames = new HashMap<>();
 
-    private boolean usingItem = false;
-    private long lastUseStart = 0L;
-
-    public void startUsingItem() {
-        usingItem = true;
-        lastUseStart = System.currentTimeMillis();
-    }
-
-    public void stopUsingItem() {
-        usingItem = false;
-    }
-
     public EntityTracker(final UserConnection user) {
         super(user);
     }
