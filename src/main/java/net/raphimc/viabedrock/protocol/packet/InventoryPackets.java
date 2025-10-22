@@ -349,7 +349,7 @@ public class InventoryPackets {
         });
 
         protocol.registerServerbound(ServerboundPackets1_21_6.CONTAINER_CLICK, null, wrapper -> {
-            wrapper.cancel();
+            //wrapper.cancel();
             final int containerId = wrapper.read(Types.VAR_INT); // container id
             final int revision = wrapper.read(Types.VAR_INT); // revision
             final short slot = wrapper.read(Types.SHORT); // slot

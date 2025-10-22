@@ -93,12 +93,6 @@ public class ExperimentalFeatures {
             // Bedrock can't hold the majority of item in offhand and can't use any either.
             // TODO: We need to handle cases where the item changes, or it affect player movement (eg: eating/blocking/etc)
             if (hand != InteractionHand.MAIN_HAND.ordinal()) {
-                entityTracker.startUsingItem();
-
-                wrapper.write(BedrockTypes.UNSIGNED_VAR_INT, 0);
-                wrapper.write(BedrockTypes.UNSIGNED_VAR_INT, ComplexInventoryTransaction_Type.ItemUseTransaction.getValue());
-
-
                 return;
             }
 
